@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-//Example: https://gist.github.com/vlucas/2bd40f62d20c1d49237a109d491974eb
+//Example From: https://gist.github.com/vlucas/2bd40f62d20c1d49237a109d491974eb
 var config = {};
 var encrypt = ( data )=>{
     try{
