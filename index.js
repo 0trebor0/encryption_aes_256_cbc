@@ -1,5 +1,4 @@
 const crypto = require('crypto');
-//Example From: https://gist.github.com/vlucas/2bd40f62d20c1d49237a109d491974eb
 var config = {};
 var encrypt = ( data )=>{
     try{
@@ -25,11 +24,15 @@ var decrypt = ( data )=>{
     }
 }
 module.exports = (key=null)=>{
-    if( key == null ){
-        config.privateKey = crypto.scryptSync( '', 'salt', 32 );
-    } else {
-        config.privateKey = crypto.scryptSync( key, 'salt', 32 );
+    try{
+        if( key == null ){
+            config.privateKey = crypto.scryptSync( '', 'salt', 32 );
+        } else {
+            config.privateKey = crypto.scryptSync( key, 'salt', 32 );
+        }
+        config.privateKey = Buffer.from( config.privateKey );
+        return {decrypt, encrypt, 'key':config.privateKey};
+    }catch(err){
+        console.log(err);
     }
-    config.privateKey = Buffer.from( config.privateKey );
-    return {decrypt, encrypt, 'key':config.privateKey};
 }

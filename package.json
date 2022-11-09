@@ -1,7 +1,7 @@
 {
   "name": "encryption_aes_256_cbc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Encryption With 3 functions and Using Crypto",
   "main": "index.js",
   "dependencies": {
     "crypto": "^1.0.1"
@@ -12,5 +12,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage":"https://github.com/0trebor0/encryption_aes_256_cbc"
 }
