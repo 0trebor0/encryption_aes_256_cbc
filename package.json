@@ -1,5 +1,5 @@
 {
-  "name": "@0trebor0/encryption_aes_256_cbc",
+  "name": "encryption_aes_256_cbc",
   "version": "1.0.0",
   "description": "Simple Encryption With 3 functions and Using Crypto",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "0trebor0",
+  "author": "",
   "license": "ISC",
   "homepage": "https://github.com/0trebor0/encryption_aes_256_cbc",
   "repository": {
